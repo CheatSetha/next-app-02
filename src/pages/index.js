@@ -18,6 +18,7 @@ export default function Home({ data }) {
 						title={movie.title}
 						thumbnail={movie.backdrop_path}
 						popularity={movie.popularity}
+            average={movie.vote_average}
 					/>
 				))}
 			</div>

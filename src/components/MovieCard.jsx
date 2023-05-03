@@ -1,8 +1,9 @@
 import { IMAGE_BASE_PATH } from "@/lib"
 import { useRouter } from "next/router";
 import React from "react"
+import {AiFillStar}from "react-icons/ai"
 
-const MovieCard = ({id,title, thumbnail, popularity}) => {
+const MovieCard = ({id,title, thumbnail, popularity, average}) => {
     const router = useRouter();
     const viewDetailHadler = (id) => {
         router.push(`/movie/${id}`)
@@ -17,10 +18,10 @@ const MovieCard = ({id,title, thumbnail, popularity}) => {
 			</figure>
 			<div className='card-body'>
 				<h2 className='card-title'>{title?title:"no title"}</h2>
+				<small className="opacity-60">Popularity {popularity}</small>
+				<small className="opacity-60">Vote average  {average} <AiFillStar className="inline text-yellow-600 " /> </small>
 			
-				<div className='card-actions justify-end'>
-					<button className='btn btn-primary'>{popularity}</button>
-				</div>
+				
 			</div>
 		</div>
 	)
