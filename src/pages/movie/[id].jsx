@@ -20,7 +20,7 @@ const movieDetail = () => {
 	console.log(video)
 
 	return (
-		<div className='w-10/12 mx-auto flex gap-10 bg-base-200'>
+		<div className='w-full px-10 mx-auto flex gap-10 bg-base-200'>
 			<img
 				src={BACKDROP_BASE_PATH + movies.backdrop_path}
 				alt=''
